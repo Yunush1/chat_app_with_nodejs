@@ -45,6 +45,10 @@ don't commit this file to your repository as well.
 
 8. Run the Flutter project on your device :) 
 
+## Alternative
+
+For the Firebase version of this Chat with Video Calls, [click here](https://github.com/RodrigoBertotti/flutter_group_chat_app_with_firebase)
+
 ## Issues
 
 Feel free to open an issue about:
