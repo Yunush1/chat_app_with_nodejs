@@ -47,7 +47,7 @@ don't commit this file to your repository as well.
 
 ## Alternative
 
-For the Firebase version of this Chat with Video Calls, [click here](https://github.com/RodrigoBertotti/flutter_group_chat_app_with_firebase)
+For the Firebase version of this Chat, [click here](https://github.com/RodrigoBertotti/flutter_group_chat_app_with_firebase)
 
 ## Issues
 
