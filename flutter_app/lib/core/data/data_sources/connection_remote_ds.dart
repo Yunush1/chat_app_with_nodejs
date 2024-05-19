@@ -10,6 +10,18 @@ class ConnectionRemoteDS {
     AsklessClient.instance.start(
       serverUrl: serverUrl,
       debugLogs: false,
+      getWebRTCParams: (userId) => Future.value(
+          WebRTCParams(configuration: {
+            'iceServers': [
+              {
+                "urls":   [
+                  'stun:stun1.l.google.com:19302',
+                  'stun:stun2.l.google.com:19302'
+                ],
+              }
+            ]
+          })
+      ),
       onAutoReauthenticationFails: (String credentialErrorCode, void Function() clearAuthentication) {
         print("Credential failed with credentialErrorCode = $credentialErrorCode");
         onAutoReauthenticationFails(credentialErrorCode, clearAuthentication);
