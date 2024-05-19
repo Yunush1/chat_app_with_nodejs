@@ -45,6 +45,10 @@ don't commit this file to your repository as well.
 
 8. Run the Flutter project on your device :) 
 
+## WebRTC - STUN/TURN Servers
+
+You can edit WebRTC configuration on the `flutter_app/lib/core/data/data_sources/connection_remote_ds.dart` file
+
 ## Alternative
 
 For the Firebase version of this Chat, [click here](https://github.com/RodrigoBertotti/flutter_group_chat_app_with_firebase)
