@@ -66,7 +66,3 @@ Feel free to open an issue about:
 ## License
 
 [MIT](LICENSE)
-
-## Contacting me
-
-📧 rodrigo@wisetap.com
