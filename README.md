@@ -1,7 +1,6 @@
 # Flutter Chat App with Node.js, WebSockets and MySQL
 
-A Flutter Chat App that supports live video and audio calls
-streaming with WebRTC, built with Node.js, MySQL, and WebSockets.
+A Flutter Chat App built with Node.js, MySQL, and WebSockets.
 
 This is a Flutter Chat App without Firebase, but if it doesn't fit for you,
 it can still be an example of a template to build your Flutter Chat UI
@@ -20,6 +19,11 @@ so the user doesn't need to be connected to the internet to see his received mes
 https://github.com/RodrigoBertotti/flutter_chat_app_with_nodejs/assets/15431956/42428123-76ab-4c5c-8ba1-29321d11b74b
 
 <sup> 🔊 The video above contains audio, click on the right side to turn it on</sup>
+
+## ⚠️ Video and audio calls may not work when users are on different networks
+For some unknown reason, using TURN servers doesn't work in my and other devs tests (you can test this behavior by setting `'iceTransportPolicy': 'relay'`),
+which means that video and audio calls may not work when users are on different networks,
+if you have a suggestion you can send an email to: rodrigo@wisetap.com, thanks!
 
 ## Getting started
 
