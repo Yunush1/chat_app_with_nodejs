@@ -24,7 +24,7 @@ https://github.com/RodrigoBertotti/flutter_chat_app_with_nodejs/assets/15431956/
 
 This project relies on the [flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc) plugin, and even though there's a [similar issue](https://github.com/flutter-webrtc/flutter-webrtc/issues/1606) from a dev in the webrtc plugin page, 
 I can't say for sure if it's either a bug in the plugin, in my code, or something else, but for some unknown reason, 
-using TURN servers doesn't work in my and other devs tests (you can test this behavior by setting `'iceTransportPolicy': 'relay'`),
+using TURN servers doesn't work in my tests (you can test this behavior by setting `'iceTransportPolicy': 'relay'`),
 which means that video and audio calls may not work when users are on different networks,
 [click here](https://github.com/RodrigoBertotti/flutter_chat_app_with_nodejs/issues/9) to make a suggestion or check the discussion
 
