@@ -20,7 +20,7 @@ https://github.com/RodrigoBertotti/flutter_chat_app_with_nodejs/assets/15431956/
 
 <sup> 🔊 The video above contains audio, click on the right side to turn it on</sup>
 
-## ⚠️ Video and audio calls may not work when users are on different networks
+## [UPDATE] ⚠️ Video and audio calls may not work when users are on different networks
 
 This project relies on the [flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc) plugin, and even though there's a [similar issue](https://github.com/flutter-webrtc/flutter-webrtc/issues/1606) from a dev in the webrtc plugin page, 
 I can't say for sure if it's a bug in the plugin or in my code, but for some unknown reason, 
