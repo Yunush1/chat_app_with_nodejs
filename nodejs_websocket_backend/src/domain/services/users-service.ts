@@ -4,6 +4,7 @@ import {DuplicateEmailFailure} from "../entity/failures/duplicate-email-failure"
 import {Either, Left, Right} from "../../utils/either";
 import {Equal, In, Not} from "typeorm";
 import {Failure} from "../entity/failures/failure";
+import { usersService } from "../controllers-and-services";
 
 export type UsersServiceParams = {
     notifyNewUserWasCreated: (userId:number) => void
@@ -19,9 +20,11 @@ export class UsersService {
 
     async saveUser(user:UserEntity) : Promise<Either<DuplicateEmailFailure | Failure, UserEntity>> {
         try {
+            console.log("service", user);
             user = Object.assign(new UserEntity(), user);
             user = await this._usersTypeormRepo.save(user);
             this.params.notifyNewUserWasCreated(user.userId);
+            console.log("Create user")
             return Right.create(user);
         } catch (e) {
             if(e.code == "ER_DUP_ENTRY") {
@@ -47,7 +50,10 @@ export class UsersService {
     }
 
     getUserByEmail(email: string) : Promise<UserEntity> {
-        return this._usersTypeormRepo.findOneBy({email: email});
+       var user = this._usersTypeormRepo.findOneBy({email:email});
+        console.log("Email ",user);
+       user.then((er)=>console.log(er))
+        return user;
     }
     getUserById(userId:number) : Promise<UserEntity> {
         return this._usersTypeormRepo.findOneBy({userId: userId});

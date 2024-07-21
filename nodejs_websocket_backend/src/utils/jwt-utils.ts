@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as jwt from "jsonwebtoken";
+import { UserEntity } from "../domain/entity/user-entity";
 
 const privateKey = fs.readFileSync(path.join(__dirname, '../', 'environment', 'jwt-private.key'), {encoding: "utf-8"});
 const expiresInSeconds:number = 30 * 60;
@@ -28,7 +29,9 @@ export function verifyJwtAccessToken(jwtAccessToken:string) : { userId?:number, 
         return { valid: false };
     }
 }
-export function generateRefreshToken()  {
+export function generateRefreshToken(user : UserEntity)  {
     //https://stackoverflow.com/a/8084248/4508758
-    return (Math.random() + 1).toString(36).substring(2);
+    var currentTime = Date();
+    var expiresIn = Date()+3600*24*7;
+    return (user.email,expiresIn,currentTime).toString().substring(2);
 }

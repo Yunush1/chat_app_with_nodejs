@@ -24,13 +24,14 @@ export class AuthService {
     async login(email: string, password: string) : Promise<Either<InvalidEmailFailure | InvalidPasswordFailure, TokensEntity>> {
         try {
             const user = await this.usersService.getUserByEmail(email);
+            console.log("login ",user);
             if(!user){
                 return Left.create(new InvalidEmailFailure());
             }
             if(!(await encryption.verify(password, user.passwordHash))){
                 return Left.create(new InvalidPasswordFailure());
             }
-            const refreshToken = generateRefreshToken();
+            const refreshToken = generateRefreshToken(user);
             user.refreshTokenHash = await encryption.hashEncryption(refreshToken);
             const saveUserRes = await this.usersService.saveUser(user);
             if(saveUserRes.isLeft()) {

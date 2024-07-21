@@ -26,16 +26,19 @@ export class UserController implements Controller {
         server.addRoute.forAllUsers.create({
             route: 'user',
             handleCreate: async (context) => {
+                
                 const user = await UserModel.fromBody(context.body);
+                console.log("controller ",user);
                 const res = await this.usersService.saveUser(user);
                 if(res.isRight()){
                     context.successCallback(res.value);
                     return;
                 }
                 context.errorCallback(res.error.errorParams);
-            },
+            },    
             toOutput: (entity) => UserModel.fromEntity(entity).output(),
         });
+        
 
         this.userListRouteInstance = server.addRoute.forAuthenticatedUsers.read<UserEntity[]>({
             route: 'user-list',

@@ -8,7 +8,7 @@ export const dbDatasourceOptions: DataSourceOptions = {
     host: "127.0.0.1", //localhost
     port: 3306,
     username: "root",
-    password: "root",
+    password: "",
     database: "flutter_chat_app_with_nodejs",
 
     // No need to change this fields bellow
@@ -18,4 +18,18 @@ export const dbDatasourceOptions: DataSourceOptions = {
     entities: [TextMessageEntity, UserEntity],
     migrations: [],
     subscribers: [],
+
+    
+        // "type": "mongodb",
+        // "host": "localhost",
+        // "port": 27017,
+        // "username": null,
+        // "password": null,
+        // "database": "flutter_chat_app",
+        // "useUnifiedTopology": true,
+        // "useNewUrlParser": true,
+        // "synchronize": false,
+        // "entities": [TextMessageEntity, UserEntity]
+      
+      
 }
