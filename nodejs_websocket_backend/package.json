@@ -2,18 +2,22 @@
    "name": "chat_with_mysql_backend",
    "version": "1.0.0",
    "scripts": {
-      "build": "tsc && cpx \"src/environment/**\" \"build/environment\"",
       "dev": "nodemon --exec ts-node src/index.ts",
-      "start": "nodemon src/index.ts"
+      "start": "nodemon src/index.ts",
+      "build": "netlify deploy --prod"
    },
    "dependencies": {
       "askless": "^2.0.3",
       "bcrypt": "^5.1.1",
       "bufferutil": "^4.0.7",
+      "express": "^4.19.2",
       "jsonwebtoken": "^9.0.2",
       "mongodb": "^5.9.2",
       "mysql": "^2.18.1",
+      "netlify-cli": "^17.33.4",
+      "netlify-lambda": "^2.0.16",
       "reflect-metadata": "^0.1.13",
+      "serverless-http": "^3.2.0",
       "typeorm": "^0.3.17",
       "utf-8-validate": "^6.0.3"
    },

@@ -5,10 +5,10 @@ import {UserEntity} from "../domain/entity/user-entity";
 export const dbDatasourceOptions: DataSourceOptions = {
     // TODO: replace with your database configuration in the fields bellow:
     type: "mysql",
-    host: "127.0.0.1", //localhost
-    port: 3306,
-    username: "root",
-    password: "",
+    host: "mysql-2a5304ad-livenaturelife01-9d5f.i.aivencloud.com", //localhost mysql-2a5304ad-livenaturelife01-9d5f.i.aivencloud.com
+    port: 22775, //22775
+    username: "avnadmin", //avnadmin
+    password: "AVNS_TZLplBewSr7erq5u_O7", //AVNS_TZLplBewSr7erq5u_O7
     database: "flutter_chat_app_with_nodejs",
 
     // No need to change this fields bellow
